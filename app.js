@@ -22,7 +22,7 @@ const mongoose = require('mongoose');
 const Dishes = require('./models/dishes'); //puede servir para la tarea
 
 const url = config.mongoUrl;
-const connect = mongoose.connect(url);
+const connect = mongoose.connect(url, {autoIndex: false});
 
 connect.then((db) => {
   console.log('Connected correctly to server');
